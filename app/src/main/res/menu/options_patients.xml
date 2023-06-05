@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_user_per"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_profile" />
+        <item
+            android:id="@+id/menu_diagnostics"
+            android:icon="@drawable/ic_diagnostic"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_diagnostic" />
+        <item
+            android:id="@+id/menu_point"
+            android:icon="@drawable/ic_hospital"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_point" />
+        <item
+            android:id="@+id/menu_food"
+            android:icon="@drawable/ic_food"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_food" />
+        <item
+            android:id="@+id/menu_sport"
+            android:icon="@drawable/ic_sport"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_sport" />
+        <item
+            android:id="@+id/menu_chat"
+            android:icon="@drawable/ic_item_chat"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_chat" />
+        <item
+            android:id="@+id/menu_news"
+            android:icon="@drawable/ic_tips"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_news" />
+        <item
+            android:id="@+id/menu_exit"
+            android:icon="@drawable/ic_exit"
+            app:iconTint="@color/blue_500"
+            android:title="@string/item_exit" />
+    </group>
+
+</menu>

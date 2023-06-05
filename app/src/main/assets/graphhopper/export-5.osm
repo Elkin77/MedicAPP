@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><osm version="0.6" generator="Overpass API 0.7.60.2 e4cf9f7a">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2023-04-30T02:09:09Z"/>
+
+  <node id="762674664" lat="4.5016849" lon="-73.7333170">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Agua"/>
+    <tag k="source" v="survey"/>
+  </node>
+  <node id="1012908716" lat="4.9559011" lon="-74.2432299">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="1141625027" lat="4.4573562" lon="-73.7039560">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="1830380562" lat="4.7060842" lon="-74.0388986">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2037624479" lat="4.6026876" lon="-74.0662221">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2040291708" lat="4.6001211" lon="-74.0629716">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2040292579" lat="4.6005355" lon="-74.0632906">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2040296393" lat="4.5996559" lon="-74.0631700">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2411592853" lat="5.0639611" lon="-74.5920089">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="2512294536" lat="5.0261609" lon="-74.2021402">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Agua"/>
+  </node>
+  <node id="2856688309" lat="4.9652413" lon="-73.7072498">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Bocatoma"/>
+  </node>
+  <node id="4113165407" lat="4.6273098" lon="-74.0646935">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="4319671289" lat="4.5278295" lon="-74.2359994">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="casa Pancha"/>
+  </node>
+  <node id="4321280204" lat="4.7367986" lon="-74.0285777">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="diet:kosher" v="yes"/>
+    <tag k="name" v="Agua SanRemo"/>
+  </node>
+  <node id="4898487221" lat="4.7705982" lon="-74.1475205">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Potrero Chico. Schlumberger"/>
+    <tag k="name:es" v="Potrero Chico. Schlumberger"/>
+  </node>
+  <node id="5597436521" lat="4.6793376" lon="-74.0979223">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="casa Jorge"/>
+  </node>
+  <node id="5961762485" lat="4.6824702" lon="-74.4004001">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="6814613595" lat="4.6730261" lon="-74.0541628">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="6854459252" lat="4.6100705" lon="-74.3079091">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="7304258957" lat="4.6732551" lon="-74.0552972">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="7862235185" lat="4.8625845" lon="-74.0655700">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Gps-1"/>
+  </node>
+  <node id="7862237585" lat="4.8628345" lon="-74.0660996">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Gps-2"/>
+  </node>
+  <node id="7862259685" lat="4.8635150" lon="-74.0655673">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Gps-3"/>
+  </node>
+  <node id="8082705858" lat="4.9994545" lon="-74.3397697">
+    <tag k="amenity" v="drinking_water"/>
+  </node>
+  <node id="8132580776" lat="4.9062217" lon="-74.3736219">
+    <tag k="amenity" v="drinking_water"/>
+    <tag k="name" v="Acueducto"/>
+  </node>
+
+</osm>

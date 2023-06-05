@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/imagePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_launcher_foreground" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterMaxLength="10"
+        app:errorTextAppearance="@style/errorText"
+        android:layout_below="@+id/imagePrimary"
+        android:id="@+id/userName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:counterTextAppearance="@style/counterText"
+        app:counterOverflowTextAppearance="@style/counterOverride">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userNameText"
+            android:layout_marginTop="10dp"
+            android:ems="1"
+            android:textColorHighlight="@color/blue_700"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:hint="@string/user"  />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterMaxLength="10"
+        app:passwordToggleEnabled="true"
+        android:inputType="textPassword"
+        android:id="@+id/textPassword"
+        android:layout_below="@+id/userName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:counterTextAppearance="@style/counterText"
+        app:counterOverflowTextAppearance="@style/counterOverride">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHighlight="@color/blue_700"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:id="@+id/passwordText"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        android:hint="@string/password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="135dp"
+        android:background="@color/blue_500"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonRecovery"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLogin"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        android:drawableLeft="@drawable/ic_recovery_pass"
+        android:text="@string/recovery"
+
+        android:textAlignment="center"
+        android:textSize="19sp" />
+
+</RelativeLayout>
+

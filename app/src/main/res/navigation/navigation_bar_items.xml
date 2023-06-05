@@ -1,0 +1,23 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.medicapp.medicappprojectcomp.fragments.ChatFragment"
+        android:label="@string/item_chat_nav"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/navigation_chat1"
+        android:name="com.medicapp.medicappprojectcomp.fragments.ChatFragment"
+        android:label="@string/item_chat_nav"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/navigation_chat2"
+        android:name="com.medicapp.medicappprojectcomp.fragments.ChatFragment"
+        android:label="@string/item_chat_nav"
+        tools:layout="@layout/fragment_chat" />
+
+</navigation>

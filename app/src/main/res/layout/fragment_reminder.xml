@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReminderFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="29dp"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/add_reminder"
+            android:textColor="@color/blue_500"
+            android:textSize="32dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutData"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTitle"
+            android:orientation="horizontal" >
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        app:counterTextAppearance="@style/counterText"
+                        app:counterOverflowTextAppearance="@style/counterOverride">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/titleEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="25dp"
+                            android:background="@color/blue_100"
+                            android:drawableStart="@drawable/ic_title"
+                            android:drawablePadding="1sp"
+                            android:hint="@string/item_title"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        android:id="@+id/dateStartTextInput"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/titleTextInput"
+                        app:counterTextAppearance="@style/counterText"
+                        app:counterOverflowTextAppearance="@style/counterOverride">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dateStartEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/blue_100"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginRight="25dp"
+                            android:drawableStart="@drawable/ic_calendar_da"
+                            android:ems="10"
+                            android:hint="@string/date_start"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        android:id="@+id/dateEndTextInput"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/dateStartTextInput"
+                        app:counterTextAppearance="@style/counterText"
+                        app:counterOverflowTextAppearance="@style/counterOverride">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/timeEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginRight="25dp"
+                            android:background="@color/blue_100"
+                            android:drawableStart="@drawable/ic_calendar_da"
+                            android:ems="10"
+                            android:hint="@string/date_end"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutEmotion"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutData"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_calendar_da"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moodCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="1dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+                       <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:checked="true"
+                                android:id="@+id/chackMonday"
+                                android:text="@string/day_monday"/>
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/chackTuesday"
+                                android:text="@string/day_tuesday"/>
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/chackWenesday"
+                                android:text="@string/day_wednesday"/>
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/chackThursday"
+                                android:text="@string/day_thursday"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical">
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:checked="true"
+                                android:id="@+id/chackFriday"
+                                android:text="@string/day_friday"/>
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:checked="true"
+                                android:id="@+id/chackSaturday"
+                                android:text="@string/day_saturday"/>
+                            <CheckBox
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:checked="true"
+                                android:id="@+id/chackSunday"
+                                android:text="@string/day_sunday"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutComment"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutEmotion"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_time"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="2dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TimePicker
+                        android:id="@+id/datePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:timePickerMode="spinner"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonAddReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutComment"
+            android:background="@color/blue_500"
+            android:layout_centerHorizontal="true"
+            android:drawableStart="@drawable/ic_add"
+            android:layout_marginTop="10dp"
+            android:text="@string/add"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegistryInsulinFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_syringe"
+            android:text="@string/add_insul"
+            android:textColor="@color/blue_500"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutData"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTitle"
+            android:orientation="horizontal" >
+            <View
+                android:id="@+id/detailRectangle"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_rectangle_two"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/blue_100"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/measureTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterMaxLength="10"
+                    app:counterTextAppearance="@style/counterText"
+                    app:counterOverflowTextAppearance="@style/counterOverride">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/measureEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:drawableStart="@drawable/ic_measure"
+                        android:drawablePadding="5sp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:inputType="textPersonName"
+                        android:hint="@string/quantity"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        android:id="@+id/dateTextInput"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/measureTextInput"
+                        app:counterTextAppearance="@style/counterText"
+                        app:counterOverflowTextAppearance="@style/counterOverride">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dateEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="75dp"
+                            android:layout_marginRight="25dp"
+                            android:drawableStart="@drawable/ic_calendar_da"
+                            android:ems="10"
+                            android:hint="@string/date"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:id="@+id/timeTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTextInput"
+
+                    android:layout_marginLeft="27dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_time"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/hour" />
+                    <TimePicker
+                        android:id="@+id/timePickerInsul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:timePickerMode="spinner"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutEmotion"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutData"
+            android:orientation="horizontal" >
+            <View
+                android:id="@+id/moodRectangle"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/red_700"
+                android:background="@drawable/ic_rectangle_two"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moodCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/blue_100"
+                app:cardElevation="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/name1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        app:counterTextAppearance="@style/counterText"
+                        app:counterOverflowTextAppearance="@style/counterOverride">
+                        <TextView
+                            android:id="@+id/moodTextView"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/mood"
+                            android:gravity="center"
+                            android:textAlignment="gravity"
+                            android:textSize="20sp"/>
+                        <LinearLayout
+                            android:id="@+id/linearState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/depressiveImageIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_below="@+id/moodTextView"
+                                android:src="@drawable/ic_sad"
+                               />
+                            <ImageView
+                                android:id="@+id/verySadImageIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/ic_angry"
+                          />
+                            <ImageView
+                                android:id="@+id/sadImageIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/ic_worried"
+                               />
+                            <ImageView
+                                android:id="@+id/happyImageIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/ic_happy_3"
+                              />
+                            <ImageView
+                                android:id="@+id/happyTImageIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/ic_happy"
+                            />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutComment"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutEmotion"
+        android:orientation="horizontal" >
+    <View
+        android:id="@+id/commentRectangle"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_rectangle_two"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="@color/blue_100"
+            app:cardElevation="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/commentTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/comment"
+                    android:gravity="top|center"
+                    android:textAlignment="gravity"
+                    android:textSize="20sp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:counterMaxLength="10"
+                    app:counterTextAppearance="@style/counterText"
+                    app:counterOverflowTextAppearance="@style/counterOverride">
+                    <EditText
+                        android:id="@+id/commentEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/commentTextView"
+                        android:drawablePadding="5sp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:inputType="textPersonName"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+        <Button
+            android:id="@+id/buttonAddInsulin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutComment"
+            android:background="@color/blue_500"
+            android:layout_centerHorizontal="true"
+            android:drawableStart="@drawable/ic_add"
+            android:layout_marginTop="10dp"
+            android:text="@string/add"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

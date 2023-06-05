@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.medicapp.medicappprojectcomp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.medicapp.medicappprojectcomp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/menu'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'androidx.navigation:navigation-ui:2.4.1'
+
+    implementation 'com.google.firebase:firebase-auth:21.0.3'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.0'
+    implementation 'com.google.firebase:firebase-firestore:24.5.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-appcheck:16.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+
+    def hiltVer = "2.44"
+    implementation "com.google.dagger:hilt-android:$hiltVer"
+    annotationProcessor "com.google.dagger:hilt-compiler:$hiltVer"
+
+    def glideVer = "4.15.0"
+    implementation "com.github.bumptech.glide:glide:$glideVer"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVer"
+
+    def lombokVer = "1.18.26"
+    compileOnly "org.projectlombok:lombok:$lombokVer"
+    annotationProcessor "org.projectlombok:lombok:$lombokVer"
+
+    def lottieVersion = "6.0.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.Gruzer:simple-gauge-android:0.3.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'javax.xml.stream:stax-api:1.0-2'
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
+    implementation 'org.osmdroid:osmdroid-mapsforge:6.1.10'
+    implementation 'org.osmdroid:osmdroid-geopackage:6.1.10'
+    implementation 'org.osmdroid:osmdroid-shape:6.1.10'
+    implementation ('com.github.MKergall:osmbonuspack:6.5.1'){
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+}

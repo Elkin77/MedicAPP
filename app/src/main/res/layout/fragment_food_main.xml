@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FoodMainFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/title_food"
+            android:textStyle="bold"
+            android:textColor="@color/blue_500"
+            android:textSize="32dp" />
+        <LinearLayout
+            android:id="@+id/layoutData"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTitle"
+            android:orientation="vertical" >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationBulbView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:lottie_rawRes="@raw/bulb"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/animationBulbView"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/tip"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/blue_500"
+                            android:textSize="20dp" />
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="true"
+                            android:textSize="18dp"
+                            android:text="Tomar 3 litros de agua"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsLunchCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/detailsBreakfastCardView"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationLunch"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:lottie_rawRes="@raw/carousel"
+                        app:lottie_autoPlay="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        app:lottie_loop="true"/>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/animationLunch"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textLunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/breakfast"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/blue_500"
+                            android:textSize="24dp" />
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_add_food"
+                                android:layout_marginLeft="20dp"/>
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_list_food"
+                                android:layout_marginLeft="20dp"/>
+                        </TableRow>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsDinnerCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/detailsCardView"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationDinner"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        app:lottie_rawRes="@raw/carousel"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/animationDinner"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/lunch"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/blue_500"
+                            android:textSize="24dp" />
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_add_food"
+                                android:layout_marginLeft="20dp"/>
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_list_food"
+                                android:layout_marginLeft="20dp"/>
+                        </TableRow>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsBreakfastCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/detailsCardView"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationBreakfast"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:lottie_rawRes="@raw/carousel"
+                        app:lottie_autoPlay="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        app:lottie_loop="true"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/animationBreakfast"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textDinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/dinner"
+                            android:textColor="@color/blue_500"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/ic_add_food" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/ic_list_food" />
+                        </TableRow>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
